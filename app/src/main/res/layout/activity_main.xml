@@ -16,8 +16,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingTop="10dp"
-    android:paddingBot="10dp"
-    android:oreintation="horizontal"
+    android:paddingBottom="10dp"
+    android:orientation="horizontal"
     android:gravity="center">
 
     <TextView
@@ -39,8 +39,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingTop="10dp"
-    android:paddingBot="10dp"
-    android:oreintation="horizontal"
+    android:paddingBottom="10dp"
+    android:orientation="horizontal"
     android:gravity="center">
 
     <TextView
