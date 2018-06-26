@@ -31,6 +31,6 @@
     android:id="@id/username_edit"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    app:layout_constraintStart_toEndOf="@+/username_text" />
+    app:layout_constraintStart_toEndOf="@+id/username_text" />
 
   </android.support.constraint.ConstraintLayout>
