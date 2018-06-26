@@ -33,7 +33,10 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:inputType="text"
-    app:layout_constraintStart_toEndOf="@+id/username_text" />
+    app:layout_constraintStart_toEndOf="@+id/username_text" 
+    app:layout_constraintTop_toTopOf="@+id/username_text"
+    app:layout_constraintBottom_toBottomOf="@+id/username_text"
+    />
 
   <EditText
     android:id="@+id/password_edit"
@@ -41,6 +44,8 @@
     android:layout_height="wrap_content"
     android:inputType="textPassword"
     app:layout_constraintStart_toEndOf="@+id/password_text" 
-    app:layout_constraintTop_toBottomOf="@+id/username_edit" />
+    app:layout_constraintTop_toTopOf="@+id/password_text"
+    app:layout_constraintBottom_toBottomOf="@+id/password_text"
+    />
 
   </android.support.constraint.ConstraintLayout>
