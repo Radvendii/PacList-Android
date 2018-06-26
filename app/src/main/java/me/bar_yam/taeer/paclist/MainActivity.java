@@ -1,6 +1,8 @@
 package me.bar_yam.taeer.paclist;
 
 import android.support.v7.app.AppCompatActivity;
+import android.app.AlertDialog;
+import android.view.View;
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
