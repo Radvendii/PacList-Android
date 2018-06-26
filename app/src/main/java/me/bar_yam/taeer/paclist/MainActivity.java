@@ -14,16 +14,26 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        final AlertDialog.Builder loginResponse = new AlertDialog.Builder(this);
         final Button loginButton = (Button) findViewById(R.id.login_button);
         loginButton.setOnClickListener(new View.OnClickListener() {
           public void onClick(View v) {
-            EditText name     = (EditText) findViewById(R.id.name_edit);
-            EditText username = (EditText) findViewById(R.id.username_edit);
-            EditText password = (EditText) findViewById(R.id.password_edit);
-            final AlertDialog.Builder adb = new AlertDialog.Builder(this);
-            adb.setTitle("foo");
-            AlertDialog ad = adb.create();
-            ad.show();
+            EditText name     = ((EditText) findViewById(R.id.name_edit)).getText().toString();
+            EditText username = ((EditText) findViewById(R.id.username_edit)).getText().toString();
+            EditText password = ((EditText) findViewById(R.id.password_edit)).getText().toString();
+            if(username == "" || password == ""){
+              loginResponse.setTitle("Error");
+              loginResponse.setMessage("Please enter both a username and password.");
+            }
+            else if(username == "foo" && password == "bar"){
+              loginResponse.setTitle("Sucess");
+              loginResponse.setMessage("Username and Password are correct!");
+            }
+            else {
+              loginResponse.setTitle("Try Again");
+              loginResponse.setMessage("Incorrect information was entered. Please send an email to request the username and password.");
+            }
+            loginResponse.show();
           }
         });
     }
