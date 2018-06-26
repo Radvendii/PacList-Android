@@ -21,11 +21,11 @@ public class MainActivity extends AppCompatActivity {
             String name     = ((EditText) findViewById(R.id.name_edit)).getText().toString();
             String username = ((EditText) findViewById(R.id.username_edit)).getText().toString();
             String password = ((EditText) findViewById(R.id.password_edit)).getText().toString();
-            if(username == "" || password == ""){
+            if(username.equals("") || password.equals("")){
               loginResponse.setTitle("Error");
               loginResponse.setMessage("Please enter both a username and password.");
             }
-            else if(username == "foo" && password == "bar"){
+            else if(username.equals("foo") && password.equals("bar")){
               loginResponse.setTitle("Sucess");
               loginResponse.setMessage("Username and Password are correct!");
             }
