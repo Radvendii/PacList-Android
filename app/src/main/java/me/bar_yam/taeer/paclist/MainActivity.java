@@ -14,14 +14,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final AlertDialog.Builder adb = new AlertDialog.Builder(this);
-        adb.setTitle("foo");
         final Button loginButton = (Button) findViewById(R.id.login_button);
         loginButton.setOnClickListener(new View.OnClickListener() {
           public void onClick(View v) {
             EditText name     = (EditText) findViewById(R.id.name_edit);
             EditText username = (EditText) findViewById(R.id.username_edit);
             EditText password = (EditText) findViewById(R.id.password_edit);
+            final AlertDialog.Builder adb = new AlertDialog.Builder(this);
+            adb.setTitle("foo");
             AlertDialog ad = adb.create();
             ad.show();
           }
