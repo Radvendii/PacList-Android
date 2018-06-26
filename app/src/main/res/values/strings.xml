@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">PacList</string>
-    <string name="username_prompt">Username</string>
-    <string name="password_prompt">Password</string>
+    <string name="name_hint">First Name/Initials</string>
+    <string name="username_hint">Hospital Login</string>
+    <string name="password_hint">Password</string>
+    <string name="login_button">Login</string>
 </resources>
