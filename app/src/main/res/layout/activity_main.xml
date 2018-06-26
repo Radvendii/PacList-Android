@@ -50,4 +50,4 @@
     app:layout_constraintBottom_toBottomOf="@+id/password_text"
     />
 
-  </android.support.constraint.ConstraintLayout>
+  </LinearLayout>
