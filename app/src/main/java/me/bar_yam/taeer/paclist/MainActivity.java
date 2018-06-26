@@ -21,6 +21,6 @@ public class MainActivity extends AppCompatActivity {
             AlertDialog ad = adb.create();
             ad.show();
           }
-        })
+        });
     }
 }
