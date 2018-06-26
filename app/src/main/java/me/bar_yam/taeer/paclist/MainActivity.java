@@ -18,9 +18,9 @@ public class MainActivity extends AppCompatActivity {
         final Button loginButton = (Button) findViewById(R.id.login_button);
         loginButton.setOnClickListener(new View.OnClickListener() {
           public void onClick(View v) {
-            EditText name     = ((EditText) findViewById(R.id.name_edit)).getText().toString();
-            EditText username = ((EditText) findViewById(R.id.username_edit)).getText().toString();
-            EditText password = ((EditText) findViewById(R.id.password_edit)).getText().toString();
+            String name     = ((EditText) findViewById(R.id.name_edit)).getText().toString();
+            String username = ((EditText) findViewById(R.id.username_edit)).getText().toString();
+            String password = ((EditText) findViewById(R.id.password_edit)).getText().toString();
             if(username == "" || password == ""){
               loginResponse.setTitle("Error");
               loginResponse.setMessage("Please enter both a username and password.");
