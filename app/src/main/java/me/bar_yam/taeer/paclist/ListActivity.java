@@ -14,5 +14,20 @@ public class ListActivity extends AppCompatActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_list);
+    ListView listView = (ListView) findViewById(R.id.action_list);
+    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.simple_list_item, ["foo", "bar", "baz"]);
+    listView.setAdapter(adapter);
   }
 }
+
+// private class MyAdapter extends BaseAdapter {
+//   @Override
+//   public View getView(int position, View convertView, ViewGroup container) {
+//     if (convertView == null) {
+//       convertView = getLayoutInflater().inflate(R.layout.list_item, container, false);
+//     }
+
+//     ((TextView) convertView.findViewById(R.id.text1)).setText(getItem(position));
+//     return convertView;
+//   }
+// }
