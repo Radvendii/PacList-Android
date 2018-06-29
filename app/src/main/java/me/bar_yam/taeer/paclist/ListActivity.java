@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.ArrayAdapter<T>;
+import android.widget.ArrayAdapter;
 
 public class ListActivity extends AppCompatActivity {
 
@@ -17,7 +17,7 @@ public class ListActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_list);
     ListView listView = (ListView) findViewById(R.id.action_list);
-    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.simple_list_item, ["foo", "bar", "baz"]);
+    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.simple_list_item, R.id.test_view, new String[]{"foo", "bar", "baz"});
     listView.setAdapter(adapter);
   }
 }
