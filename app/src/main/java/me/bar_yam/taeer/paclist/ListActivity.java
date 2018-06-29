@@ -10,26 +10,18 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.ArrayAdapter;
 
-public class ListActivity extends AppCompatActivity {
+import java.util.ArrayList;
 
+public class ListActivity extends AppCompatActivity {
+  ArrayList<TodoItem> todoList = new ArrayList<>();
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_list);
+    todoList.add(new TodoItem("PACU", "10", "Signout", "16:30:17"));
+    todoList.add(new TodoItem("PACU", "46", "Signout", "16:33:00"));
     ListView listView = (ListView) findViewById(R.id.action_list);
-    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.simple_list_item, R.id.test_view, new String[]{"foo", "bar", "baz"});
+    MyAdapter adapter = new MyAdapter(this, R.layout.simple_list_item, todoList);
     listView.setAdapter(adapter);
   }
 }
-
-// private class MyAdapter extends BaseAdapter {
-//   @Override
-//   public View getView(int position, View convertView, ViewGroup container) {
-//     if (convertView == null) {
-//       convertView = getLayoutInflater().inflate(R.layout.list_item, container, false);
-//     }
-
-//     ((TextView) convertView.findViewById(R.id.text1)).setText(getItem(position));
-//     return convertView;
-//   }
-// }

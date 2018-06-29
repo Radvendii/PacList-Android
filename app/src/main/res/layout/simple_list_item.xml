@@ -1,17 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  android:paddingLeft="10dp"
-  android:paddingRight="10dp"
-  android:orientation="vertical"
-  tools:context=".ListActivity">
+  android:orientation="horizontal"
+  android:gravity="left" >
 
   <TextView
-    android:id="@+id/test_view"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content" />
+    android:id="@+id/todo_list_room"
+    android:textSize="20dp"
+    android:layout_width="60dp"
+    android:layout_height="match_parent" />
 
-</RelativeLayout>
+  <TextView
+    android:id="@+id/todo_list_bed_num"
+    android:textSize="20dp"
+    android:layout_width="50dp"
+    android:layout_height="match_parent" />
+
+  <TextView
+    android:id="@+id/todo_list_action"
+    android:textSize="20dp"
+    android:layout_width="0dp"
+    android:layout_weight="1"
+    android:layout_height="match_parent" />
+
+  <TextView
+    android:id="@+id/todo_list_time"
+    android:textSize="20dp"
+    android:layout_width="85dp"
+    android:layout_height="match_parent" />
+
+</LinearLayout>
