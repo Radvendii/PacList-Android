@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
   public static final String _Username = "usernameKey";
   public static final String _Password = "passowrdKey";
 
+  EditText name, username, password;
+
   SharedPreferences sharedPrefs;
 
   @Override
@@ -26,9 +28,9 @@ public class MainActivity extends AppCompatActivity {
     setContentView(R.layout.activity_main);
 
     sharedPrefs = getSharedPreferences(_LoginPrefs, Context.MODE_PRIVATE);
-    EditText name     = (EditText) findViewById(R.id.name_edit);
-    EditText username = (EditText) findViewById(R.id.username_edit);
-    EditText password = (EditText) findViewById(R.id.password_edit);
+    name     = (EditText) findViewById(R.id.name_edit);
+    username = (EditText) findViewById(R.id.username_edit);
+    password = (EditText) findViewById(R.id.password_edit);
 
     name.setText(sharedPrefs.getString(_Name, ""));
     username.setText(sharedPrefs.getString(_Username, ""));
@@ -44,22 +46,22 @@ public class MainActivity extends AppCompatActivity {
     final Button loginButton = (Button) findViewById(R.id.login_button);
     loginButton.setOnClickListener(new View.OnClickListener() {
       public void onClick(View v) {
-        String name     = ((EditText) findViewById(R.id.name_edit)).getText().toString();
-        String username = ((EditText) findViewById(R.id.username_edit)).getText().toString();
-        String password = ((EditText) findViewById(R.id.password_edit)).getText().toString();
+        String n = name.getText().toString();
+        String u = username.getText().toString();
+        String p = password.getText().toString();
 
         SharedPreferences.Editor editor = sharedPrefs.edit();
 
-        editor.putString(_Name, name);
+        editor.putString(_Name, n);
 
-        if(username.equals("") || password.equals("")){
+        if(u.equals("") || p.equals("")){
           loginResponse.setTitle("Error");
           loginResponse.setMessage("Please enter both a username and password.");
           loginResponse.show();
         }
-        else if(username.equals("foo") && password.equals("bar")){
-          editor.putString(_Username, username);
-          editor.putString(_Password, password);
+        else if(u.equals("foo") && p.equals("bar")){
+          editor.putString(_Username, u);
+          editor.putString(_Password, p);
           startActivity(new Intent(getApplicationContext(), ListActivity.class));
         }
         else {
