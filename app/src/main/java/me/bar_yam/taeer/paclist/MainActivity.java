@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
   public static final String _Name = "nameKey";
   public static final String _Username = "usernameKey";
   public static final String _Password = "passowrdKey";
+  public static final String _LoggedIn = "loggedinKey";
 
   EditText name, username, password;
 
@@ -59,9 +60,10 @@ public class MainActivity extends AppCompatActivity {
           loginResponse.setMessage("Please enter both a username and password.");
           loginResponse.show();
         }
-        else if(u.equals("foo") && p.equals("bar")){
+        else if(u.equals("bwhpacu1") && p.equals("flanagan")){
           editor.putString(_Username, u);
           editor.putString(_Password, p);
+          editor.putBool(_LoggedIn, True);
           startActivity(new Intent(getApplicationContext(), ListActivity.class));
         }
         else {

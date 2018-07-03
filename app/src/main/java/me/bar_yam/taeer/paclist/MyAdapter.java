@@ -16,13 +16,13 @@ import android.widget.ArrayAdapter;
 
 import java.util.ArrayList;
 
-public class MyAdapter extends ArrayAdapter<TodoItem> {
+public class MyAdapter extends ArrayAdapter<TaskItem> {
 
-  ArrayList<TodoItem> todoList = new ArrayList<>();
+  ArrayList<Task> taskList = new ArrayList<>();
 
-  public MyAdapter(Context context, int textViewResourceId, ArrayList<TodoItem> objects) {
+  public MyAdapter(Context context, int textViewResourceId, ArrayList<Task> objects) {
     super(context, textViewResourceId, objects);
-    todoList = objects;
+    taskList = objects;
   }
 
   @Override
@@ -36,15 +36,15 @@ public class MyAdapter extends ArrayAdapter<TodoItem> {
     LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     v = inflater.inflate(R.layout.simple_list_item, null);
 
-    TextView room = (TextView) v.findViewById(R.id.todo_list_room);
-    TextView bedNum = (TextView) v.findViewById(R.id.todo_list_bed_num);
-    TextView action = (TextView) v.findViewById(R.id.todo_list_action);
-    TextView time = (TextView) v.findViewById(R.id.todo_list_time);
+    TextView room = (TextView) v.findViewById(R.id.task_list_room);
+    TextView bedNum = (TextView) v.findViewById(R.id.task_list_bed_num);
+    TextView action = (TextView) v.findViewById(R.id.task_list_action);
+    TextView time = (TextView) v.findViewById(R.id.task_list_time);
 
-    room.setText(todoList.get(position).getRoom());
-    bedNum.setText(todoList.get(position).getBedNum());
-    action.setText(todoList.get(position).getAction());
-    time.setText(todoList.get(position).getTime());
+    room.setText(taskList.get(position).getRoom());
+    bedNum.setText(taskList.get(position).getBedNum());
+    action.setText(taskList.get(position).getAction());
+    time.setText(taskList.get(position).getTime());
     return v;
   }
 }

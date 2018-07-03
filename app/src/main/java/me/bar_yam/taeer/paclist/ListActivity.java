@@ -13,15 +13,15 @@ import android.widget.ArrayAdapter;
 import java.util.ArrayList;
 
 public class ListActivity extends AppCompatActivity {
-  ArrayList<TodoItem> todoList = new ArrayList<>();
+  ArrayList<Task> taskList = new ArrayList<>();
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_list);
-    todoList.add(new TodoItem("PACU", "10", "Signout", "16:30:17"));
-    todoList.add(new TodoItem("PACU", "46", "Signout", "16:33:00"));
+    taskList.add(new Task("PACU", "10", "Signout", "16:30:17"));
+    taskList.add(new Task("PACU", "46", "Signout", "16:33:00"));
     ListView listView = (ListView) findViewById(R.id.action_list);
-    MyAdapter adapter = new MyAdapter(this, R.layout.simple_list_item, todoList);
+    MyAdapter adapter = new MyAdapter(this, R.layout.simple_list_item, taskList);
     listView.setAdapter(adapter);
   }
 }

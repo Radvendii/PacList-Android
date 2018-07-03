@@ -10,26 +10,26 @@
   android:gravity="left" >
 
   <TextView
-    android:id="@+id/todo_list_room"
+    android:id="@+id/task_list_room"
     android:textSize="20dp"
     android:layout_width="60dp"
     android:layout_height="match_parent" />
 
   <TextView
-    android:id="@+id/todo_list_bed_num"
+    android:id="@+id/task_list_bed_num"
     android:textSize="20dp"
     android:layout_width="50dp"
     android:layout_height="match_parent" />
 
   <TextView
-    android:id="@+id/todo_list_action"
+    android:id="@+id/task_list_action"
     android:textSize="20dp"
     android:layout_width="0dp"
     android:layout_weight="1"
     android:layout_height="match_parent" />
 
   <TextView
-    android:id="@+id/todo_list_time"
+    android:id="@+id/task_list_time"
     android:textSize="20dp"
     android:layout_width="85dp"
     android:layout_height="match_parent" />
