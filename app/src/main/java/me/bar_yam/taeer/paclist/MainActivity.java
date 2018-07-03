@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     setContentView(R.layout.activity_main);
 
     sharedPrefs = getSharedPreferences(_LoginPrefs, Context.MODE_PRIVATE);
+
     name     = (EditText) findViewById(R.id.name_edit);
     username = (EditText) findViewById(R.id.username_edit);
     password = (EditText) findViewById(R.id.password_edit);
@@ -36,6 +37,10 @@ public class MainActivity extends AppCompatActivity {
     name.setText(sharedPrefs.getString(_Name, ""));
     username.setText(sharedPrefs.getString(_Username, ""));
     password.setText(sharedPrefs.getString(_Password, ""));
+
+    if(sharedPrefs.getBoolean(_LoggedIn, false)) {
+      startActivity(new Intent(getApplicationContext(), ListActivity.class));
+    }
 
     final AlertDialog.Builder loginResponse = new AlertDialog.Builder(this)
       .setPositiveButton("OK", new DialogInterface.OnClickListener() {
@@ -63,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         else if(u.equals("bwhpacu1") && p.equals("flanagan")){
           editor.putString(_Username, u);
           editor.putString(_Password, p);
-          editor.putBool(_LoggedIn, True);
+          editor.putBoolean(_LoggedIn, true);
           startActivity(new Intent(getApplicationContext(), ListActivity.class));
         }
         else {

@@ -16,7 +16,7 @@ import android.widget.ArrayAdapter;
 
 import java.util.ArrayList;
 
-public class MyAdapter extends ArrayAdapter<TaskItem> {
+public class MyAdapter extends ArrayAdapter<Task> {
 
   ArrayList<Task> taskList = new ArrayList<>();
 
