@@ -34,7 +34,7 @@ public class MyAdapter extends ArrayAdapter<TaskItem> {
   public View getView(int position, View convertView, ViewGroup container) {
     View v = convertView;
     LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-    v = inflater.inflate(R.layout.simple_list_item, null);
+    v = inflater.inflate(R.layout.list_item, null);
 
     TextView room = (TextView) v.findViewById(R.id.task_list_room);
     TextView bedNum = (TextView) v.findViewById(R.id.task_list_bed_num);

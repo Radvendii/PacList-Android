@@ -21,7 +21,7 @@ public class ListActivity extends AppCompatActivity {
     taskList.add(new Task("PACU", "10", "Signout", "16:30:17"));
     taskList.add(new Task("PACU", "46", "Signout", "16:33:00"));
     ListView listView = (ListView) findViewById(R.id.action_list);
-    MyAdapter adapter = new MyAdapter(this, R.layout.simple_list_item, taskList);
+    MyAdapter adapter = new MyAdapter(this, R.layout.list_item, taskList);
     listView.setAdapter(adapter);
   }
 }
