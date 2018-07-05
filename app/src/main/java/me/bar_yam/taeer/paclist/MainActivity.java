@@ -1,10 +1,13 @@
 package me.bar_yam.taeer.paclist;
 
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.ActionBar;
 import android.os.Bundle;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.view.View;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.widget.Button;
 import android.widget.EditText;
 import android.content.Intent;
@@ -79,5 +82,12 @@ public class MainActivity extends AppCompatActivity {
         editor.commit();
       }
     });
+  }
+
+  @Override
+  public boolean onCreateOptionsMenu(Menu menu){
+    MenuInflater inflater = getMenuInflater();
+    inflater.inflate(R.menu.main_menu, menu);
+    return true;
   }
 }

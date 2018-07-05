@@ -1,0 +1,13 @@
+- task list
+  - average on top bar
+  - logout button
+    - confirm popup
+  - swipe to delete
+- Adding new tasks
+  - "+" Button on top bar
+    (toolbar or actionbar?)
+  - DSU/PACU/CVRR picker
+    - save choice
+  - Grid of beds
+  - Grid of potential problems
+  - dynamic list of tasks
